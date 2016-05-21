@@ -9,14 +9,14 @@ from nltk.stem.wordnet import WordNetLemmatizer
 from nltk.corpus import wordnet as wn
 from nltk.tag.stanford import StanfordPOSTagger
 
-def init():#__init__():
+def init():
     ###Set paths###
     global java_path;java_path = "C:\\Program Files\\Java\\jdk1.8.0_60\\bin\\java.exe"
     global postagger_model_path;postagger_model_path='E:\\nltk_data\\stanford\\stanford-postagger.jar'
     global distsimtagger_model_path;distsimtagger_model_path='E:\\nltk_data\\stanford\\model\\english-bidirectional-distsim.tagger'
-    global path;path="E:\\EclipseIndigo\\workspace\\Inference\\"#project_path
+    global path;path=""#project_path
     global rule_in_file;rule_in_file="in_files\\ablation.txt"#input file
-    global rule_out_file;rule_out_file=""#output file
+    #global rule_out_file;rule_out_file=""#output file
     #Data files#
     global redundant_prep_file;redundant_prep_file="data\\ch9out2-r-0000all_norm_IN_null.txt"
     global prep_syn_file;prep_syn_file="data\\prep_pair_all_freq.txt"
@@ -24,18 +24,6 @@ def init():#__init__():
     #thesaurus db#
     global thesaurus_db;thesaurus_db = 'thesaurus'
     global password_db;password_db=''
-    ###Set paths###
-    # ###Set paths:Ubuntu###
-    # global java_path = "/usr/lib/jvm/java-8-oracle/bin/java"
-    # global postagger_model_path='/home/prachi/nltk_data/stanford/stanford-postagger.jar'
-    # global distsimtagger_model_path='/home/prachi/nltk_data/stanford/model/english-bidirectional-distsim.tagger'
-    # global java_options_mem='-mx20G'
-    # global path="/home/prachi/Documents/project/code/ver_naacl/Inference/"
-    # global rule_in_file="in_files/ablation.txt"
-    # global rule_out_file=""
-    # global redundant_prep_file="data/ch9out2-r-0000all_norm_IN_null.txt"
-    # global prep_syn_file="data/prep_pair_all_freq.txt"
-    # global thesaurus_db = 'thesaurus'
     ###Feature flags###
     #Thesaurus Synonyms
     global flag_whole;flag_whole=1

@@ -63,3 +63,8 @@ Details :
     /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
     /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
     /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+    --
+    -- Sample Entries
+    INSERT INTO `antonyms` (`Word`, `Sense`, `Word_sense_antonyms`) VALUES ('able-bodied', 'adj:physically strong and capable', 'weak;delicate;infirm');
+    INSERT INTO `syn_of_syn` (`Word`, `Sense`, `Word_sense_syn_of_syn`) VALUES ('zipped', 'verb:scurry:move along swiftly', 'rip;dash;skim;sprint;hop along;whirl;zip;scutter;scamper;shoot;run;step along;dart;bustle;dust;hurry;fly;rush;whisk;tear;scurry;scud;move along swiftly;race;scoot;barrel;hasten;scuttle');
+    INSERT INTO `synonyms` (`Word`, `Sense`, `Word_sense_synonyms`) VALUES ('secure', 'adj:fastened:stable', 'tenacious;adjusted;set;bound;anchored;staunch;solid as a rock;safe and sound;buttoned down;immovable;nailed;fast;tight;stable;firm;sure;locked;strong;sound;fastened;solid;fortified;steady;iron;fixed');

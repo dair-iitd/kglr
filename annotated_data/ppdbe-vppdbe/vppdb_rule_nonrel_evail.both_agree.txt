@@ -1,0 +1,216 @@
+0;go on;unfold
+1;examine;check
+1;cater to;serve
+1;select;check
+1;project in;project in
+0;make;perform
+0;base;make
+0;present at;make at
+1;control for;control for
+0;direct;obtain
+0;solve;remedy
+0;perform;determine
+1;guarantee;guarantee
+1;gun;gun
+0;bolt on;screw on
+0;devise;produce
+1;carry on with;continue with
+1;applaud;hail
+1;obtain;obtain
+1;transmit to;communicate to
+1;transmit;pass on
+1;shorten;shorten
+1;preside over;chair
+1;take seat at;take place at
+1;expenditure for;expenditure for
+1;aim to;intend to
+1;post at;put at
+0;wear;bear
+0;lay out in;show on
+1;reopen;open
+1;forecast;estimate
+1;draw from;draw from
+0;establish;mount
+1;transfer to;transfer to
+1;stay on;remain
+1;establish;devise
+1;establish;prove
+1;turn off;turn off
+0;lend;bring
+1;intake;intake
+1;outside;outside
+0;make;belong to
+1;operate;use
+1;use for;adopt for
+0;intervene in;occur in
+1;obtain during;gain in
+0;line;position
+1;speed;hasten
+1;contain information on;contain information on
+1;support;endorse
+1;hamper;impede
+1;proscribe;prohibit
+1;prepare;construct
+0;be;rest
+0;strengthen;expedite
+0;integrate;constitute
+0;place;bring
+0;run;cast
+0;lay;earmark
+0;run;squirt
+0;look;suspect
+0;give;go for
+0;give rise to;impose
+0;require by;claim by
+0;handle;proceed
+0;execute;take
+0;crack;go
+0;pull;take
+0;restrict;prescribe
+0;rip;rebuke
+0;seize;follow
+0;provide by;plan in
+0;make at;deliver on
+0;disappoint;disillusion
+0;admit in;install in
+0;clothe;garnish
+0;maintain;stipulate
+0;return;distribute
+0;conduct;range
+0;engage in;work at
+0;draw for;introduce for
+0;contain;constrain
+0;delay;move
+0;second;allocate
+0;get in;pass through
+0;market in;contract on
+0;claim by;report from
+0;report to;distribute to
+0;refer to;direct
+0;engage;exert
+0;set;enter
+0;storm;slam
+0;answer;comply with
+0;sell;cede
+0;call;ban
+0;blend;confuse
+0;hear;examine
+0;develop by;place by
+0;found;inspire
+3;disband;dispel
+3;embrace;involve
+1;support;follow
+1;overhaul;rework
+1;yield;emit
+1;record;make
+1;land in;land at
+1;lead;steer
+1;exonerate;exempt
+1;attenuate;reduce
+1;question;suspect
+1;lodge;put forward
+1;seek;want
+1;market under;sell under
+1;spend;blow
+1;open fire on;fire on
+1;convey;shift
+1;join;embrace
+1;come out of;come out of
+1;draw;pick
+1;reference in;reference on
+1;lead;spearhead
+1;file;file
+1;inflame;kindle
+1;project;estimate
+1;change;effect
+1;issue in;publish on
+1;count as;count for
+1;plug;clog
+1;predict;foresee
+1;finance;support
+1;show up;come out
+1;earmark;designate
+1;lie down;lie down
+1;parallel;relate
+1;stamp;tag
+1;incorporate;encompass
+1;immigrate to;immigrate to
+1;intensify;boost
+1;obsess;obsess
+1;permeate;infiltrate
+1;nail;snare
+1;be in;lie on
+1;support in;aid
+1;struggle of;struggle of
+1;form;weave
+1;present in;state on
+1;set foot in;go in
+1;outline in;be highlighted in
+1;reveal;say
+1;incorporate;embody
+1;hear;collect
+1;reclaim;claim
+1;deliver by;provide from
+1;make in;present at
+1;discern;make out
+1;collect;round up
+1;comply with;discharge
+1;communicate;send
+1;reject;reject
+1;be critical to;be key to
+1;need;lack
+1;condense;summarize
+1;take advantage of;realize
+1;accompany with;send with
+1;incorporated;pick up
+1;massage;rub
+1;compete for;struggle for
+1;conduct;offer
+1;reduce emission from;reduce emission from
+1;aid;help out
+1;hum;hum
+1;construct for;manufacture for
+1;assist in;participate at
+1;speak at;speak in
+1;shorten;truncate
+1;secure;anchor
+1;present report to;submit report to
+1;satisfy;adhere to
+1;perform at;conduct at
+1;shower;shower
+1;demand in;request by
+1;subscribe to;subscribe to
+1;forward to;present to
+1;signify;identify
+1;control;crack down
+1;halt;stall
+1;function;operate
+1;include;be about
+1;review;review
+1;concern;bother
+1;review in;review in
+1;front;front
+1;teach;tell
+1;portray;paint
+1;widen;spread
+1;give;hand out
+1;adapt;modulate
+1;overcome;get over
+1;pressure;influence
+1;roll;move
+1;remedy;treat
+1;reside;dwell
+1;ease;calm
+1;examine;look through
+1;break;rip through
+1;transform into;translate into
+1;process with;treat with
+1;bear;suffer from
+1;be like;be comparable to
+1;evacuate;clear
+1;peroxide;peroxide
+1;introduce at;include at
+1;remain as;be as
+1;differ from;be different from
+1;operate;control
+1;lay out;map out

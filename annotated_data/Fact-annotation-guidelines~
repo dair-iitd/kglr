@@ -1,0 +1,64 @@
+Task: Judge can reasonably infer the tuple from the given sentence. 
+And the tuple is well formed ie arguments are meaningful and the rel phrase does express an accurate relation between the arguments. 
+
+File to be annotated: ppdb.both.shikar [attached]
+The file has 200 triples.
+
+INPUT FILE FORMAT
+Every two line has the following format:
+
+Sentence 1
+arg1; rel2; arg2
+
+EXPECTED OUTPUT FORMAT
+> do not change the sentence 1
+> In front of the tuple, add a tag in the following format:
+
+"tag";arg1; rel2; arg2
+
+tag= 0/1/2/3
+
+0: If arg1 and arg2 are related in some way in the given sentence but 
+    the relation stated in the triple is incorrect.
+    i.e. extraction (triple) is not well formed or not true.
+1: If arg1 and arg2 are related in some way in the given sentence and
+    the tuple is well formed (i.e. arguments are meaningful and the rel phrase does express an accurate relation between the arguments) and 
+    true.
+2: If arg1 and arg2 are NOT related in the given sentence (ie Reverb extraction is incorrect)
+3: Not able to identify the right tag
+
+NOTE:
+All triples are normalized and in small case.
+"be" may mean is/was/were
+Ignore slight mistakes by REVERB in identifying the argument boundaries. Basically you don't have to be too strict but the argument boundaries should be meaningful. 
+Example: 
+The action begins on April 21st with DreamHack Stockholm Open and it , as every other event , will be streamed in HD for free .
+action;start out on;april
+you can safely assume april as April 21st here
+
+SAMPLE INPUT
+The spacecraft traveled around Jupiter in elongated ellipses , each orbit lasting about two months .
+spacecraft;turn around;jupiter
+
+Cena climbed on top of the ambulance and dared Kane to come up .
+cena;come up on;top
+
+My grandfather traveled the world , but in the end he always returned to his beloved India .
+world;be moved by;my grandfather
+
+Habitat Selection Throughout its range , the Snowy Egret uses a variety of wetland habitats for foraging , including freshwater marshes , swamps , flooded fields , tidal marshes , and mangroves .
+freshwater marsh;charge;field
+
+SAMPLE OUTPUT
+The spacecraft traveled around Jupiter in elongated ellipses , each orbit lasting about two months .
+"1";spacecraft;turn around;jupiter
+
+Cena climbed on top of the ambulance and dared Kane to come up .
+"1";cena;come up on;top
+
+My grandfather traveled the world , but in the end he always returned to his beloved India .
+"0";world;be moved by;my grandfather
+
+Habitat Selection Throughout its range , the Snowy Egret uses a variety of wetland habitats for foraging , including freshwater marshes , swamps , flooded fields , tidal marshes , and mangroves .
+"2";freshwater marsh;charge;field
+

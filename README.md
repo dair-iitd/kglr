@@ -11,6 +11,8 @@ Details :
     [kglr_core.py] ( KGLR/kglr_core.py ): All core rule implementaion are in this file
     
     [kglr_main.py] ( KGLR/kglr_main.py ): Run python kglr_main.py
+    
+    [generate_output_file.sh] ( out_files/generate_output_file.sh ): After running python kglr_main.py, run ./generate_output_file.sh
 
     [outfile.txt] ( out_files/outfile.txt ): System output will be stored in this file
 

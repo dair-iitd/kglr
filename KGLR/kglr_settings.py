@@ -98,23 +98,11 @@ def init():
     global f_w_whole_t1_in_t2;f_w_whole_t1_in_t2=open(path+"out_files\\whole_t1_in_t2.csv","w")
     global f_w_affix_t2_in_t1;f_w_affix_t2_in_t1=open(path+"out_files\\affix_t2_in_t1.csv","w")
     global f_w_affix_t1_in_t2;f_w_affix_t1_in_t2=open(path+"out_files\\affix_t1_in_t2.csv","w")
-#     
-#     global ;f_score=open(path+"out_files/score.txt","w")
-#     global ;f_w=open(path+"out_files/200_tncf_annotated_part2_features_in.csv","w")           
-#     global ;f_w_not_handled_1=open(path+"out_files/not_handled_1.csv","w")
-#     global ;f_w_rule_t2_in_t1=open(path+"out_files/f_w_rule_t2_in_t1.csv","w")
-#     global ;f_w_rule_t1_in_t2=open(path+"out_files/f_w_rule_t1_in_t2.csv","w")
-#     global ;f_w_whole_t2_in_t1=open(path+"out_files/whole_t2_in_t1.csv","w")
-#     global ;f_w_whole_t1_in_t2=open(path+"out_files/whole_t1_in_t2.csv","w")
-#     global ;f_w_affix_t2_in_t1=open(path+"out_files/affix_t2_in_t1.csv","w")
-#     global ;f_w_affix_t1_in_t2=open(path+"out_files/affix_t1_in_t2.csv","w")
     global f_log;f_log=open("log.txt","w")
     
     global check_thesaurus_100;check_thesaurus_100={}#for speedup
     global check_db_100;check_db_100={}#for speedup
-    #global count_t2int1_prev;count_t2int1_prev=0
-    #global flag_affix_call;flag_affix_call=0
-    
+
     global light_verb_old;light_verb_old=["take", "have", "give", "do", "make"]
     global verbs_verb;verbs_verb=["has","have","be","is","were","are","was","had","being","began","am","following","having","do","does",
                 "did","started","been","became","left","help","helped","get","keep","think","got","gets","include",

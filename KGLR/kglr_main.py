@@ -1,131 +1,15 @@
-'''
-
-'''
 import re,sys,os,nltk,itertools
 import MySQLdb as mdb
 from nltk.stem.wordnet import WordNetLemmatizer
 from nltk.corpus import wordnet as wn
 from nltk.tag.stanford import StanfordPOSTagger
 
-# Global_data={}
-# ###Set paths###
-# java_path = "C:\\Program Files\\Java\\jdk1.8.0_60\\bin\\java.exe"
-# postagger_model_path='E:\\nltk_data\\stanford\\stanford-postagger.jar'
-# distsimtagger_model_path='E:\\nltk_data\\stanford\\model\\english-bidirectional-distsim.tagger'
-# path="E:\\EclipseIndigo\\workspace\\Inference\\"#project_path
-# rule_in_file="in_files\\ablation.txt"#input file
-# rule_out_file=""#output file
-# #Data files#
-# redundant_prep_file="data\\ch9out2-r-0000all_norm_IN_null.txt"
-# prep_syn_file="data\\prep_pair_all_freq.txt"
-# java_options_mem='-mx2G'
-# #thesaurus db#
-# Global_data['thesaurus_db'] = 'thesaurus'
-# Global_data['password_db']=''
-# ###Set paths###
-# # ###Set paths:Ubuntu###
-# # java_path = "/usr/lib/jvm/java-8-oracle/bin/java"
-# # postagger_model_path='/home/prachi/nltk_data/stanford/stanford-postagger.jar'
-# # distsimtagger_model_path='/home/prachi/nltk_data/stanford/model/english-bidirectional-distsim.tagger'
-# # java_options_mem='-mx20G'
-# # path="/home/prachi/Documents/project/code/ver_naacl/Inference/"
-# # rule_in_file="in_files/ablation.txt"
-# # rule_out_file=""
-# # redundant_prep_file="data/ch9out2-r-0000all_norm_IN_null.txt"
-# # prep_syn_file="data/prep_pair_all_freq.txt"
-# # thesaurus_db = 'thesaurus'
-# # password_db='nlp_prachi'
-# # ###Set paths:Ubuntu###
-# 
-# 
-# ###Feature flags###
-# #Thesaurus Synonyms
-# Global_data['flag_whole']=1
-# Global_data['flag_antonyms']=1
-# Global_data['flag_syn_of_syn']=1
-# #Negating rules
-# Global_data['flag_not']=1
-# #Wordnet Hypernyms
-# Global_data['flag_wordnet_hypernym_hyponym']=1
-# Global_data['flag_level2_hypernyms']=1
-# #Dropping Modifiers
-# Global_data['rule_superlative']=1
-# Global_data['rule_JJ_NN_mod']=1
-# #Gerund-Infinitive Equivalence
-# Global_data['flag_gerund_infi_to']=1
-# #Deverbal Nouns
-# Global_data['flag_noun_verb_wn']=1
-# #Light Verbs and Serial Verbs
-# Global_data['rule_lightverb_dt']=1
-# Global_data['rule_verbverb']=1
-# #Preposition Synonyms
-# Global_data['rule_equal_preposition']=1
-# Global_data['rule_equal_preposition_data_freq']=1
-# #Be-words & Determiners
-# Global_data['flag_be_trail']=1
-# #flag_dt=1#dt rule
-# Global_data['flag_deep_dt']=1
-# Global_data['kglr_settings.f_logdt']=1#interim removal of dt
-# Global_data['rule_be']=1
-# #Active-Passive
-# Global_data['rule_active_passive_be']=1
-# #Redundant Preposition
-# Global_data['rule_preposition_null']=1#X;learn about;Y --> X;learn;Y
-# #Extra#be - preposition#("be sick of@R@;tire of@R@"("be sick of@R@;tire of@R@")
-# Global_data['rule_be_prep']=1
-# 
-# ####Utility Flags###
-# #del
-# Global_data['flag_rules']=1
-# Global_data['flag_stanford_pos']=1
-# 
-# Global_data['flag_affix']=1
-# #utility
-# Global_data['count_t2int1_prev']=0
-# Global_data['flag_affix_call']=0
-# Global_data['flag_rev']=1#to ensure: X t1 Y -> X t2 Y
-# Global_data['flag_bidir_syn']=1#flag to check t1 in t2'syn and t2 in t1's syn
-# Global_data['flag_pos_match']=1#ensure matching of same pos words
-# Global_data['flag_derivation']=1#extract derivations of given word
-# 
-# #extra
-# Global_data['rule_have']=1
-# Global_data['rule_have_JJ']=1
-# 
-# ####Init values###
-# Global_data['tp_2']=0
-# Global_data['tp']=0
-# Global_data['kglr_settings.flag_']=0
-# Global_data['all_p']=0
-# Global_data['all_p_2'] = 0
-# Global_data['flag_positive']=1
-# 
-# Global_data['check_thesaurus_100']={}#for speedup
-# Global_data['check_db_100']={}#for speedup
-# Global_data['count_t2int1_prev']=0
-# Global_data['flag_affix_call']=0
-# 
-# #aux_verb=["be"]
-# Global_data['light_verb_old']=["take", "have", "give", "do", "make"]
-# Global_data['verbs_verb']=["has","have","be","is","were","are","was","had","being","began","am","following","having","do","does",
-#             "did","started","been","became","left","help","helped","get","keep","think","got","gets","include",
-#             "suggest","used","see","consider","means","try","start","included","lets","say","continued",
-#             "go","includes","becomes","begins","keeps","begin","starts","said"]#,"stop"
-# Global_data['verb_verb_norm']=["begin","start","continue","say"]
-# Global_data['all_verb_verb']=Global_data['verb_verb_norm']+Global_data['verbs_verb']#used for checking serial verb constructions
-# Global_data['L_gerund_infi_to']=["attempt","begin","bother","cease","continue","deserve","neglect","omit","permit","start","fear","intend","recommend","advice","allow","permit","encourage","forbid","choose"]
-# Global_data['L_gerund_infi_to_t1']=["like","love","prefer"]
 import kglr_settings
-#from kglr_settings import *
 kglr_settings.init()
-#init()
-#from kglr_settings import *
 
 import kglr_core,kglr_utility
 from kglr_core import *
 from kglr_utility import *
-
-#lemmatizer=get_lemmatizer()#kglr_settings.java_path,kglr_settings.distsimtagger_model_path,kglr_settings.postagger_model_path,kglr_settings.java_options_mem)
 
 if __name__ == '__main__':
     lines=read_file(kglr_settings.path+kglr_settings.rule_in_file)
